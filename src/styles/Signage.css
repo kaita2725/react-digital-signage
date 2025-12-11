@@ -1,0 +1,18 @@
+.marquee {
+    overflow: hidden;
+    white-space: nowrap;
+    font-weight: 900;
+    font-size: 5rem;
+}
+.marquee span {
+    display: inline-block;
+    animation: marquee 10s linear infinite;
+}
+@keyframes marquee {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}

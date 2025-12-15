@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+  client:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: react-signage
+    ports:
+      - "8081:80"
+    volumes:
+      # Allows updating config.json without rebuilding Docker image
+      - ../public/config.json:/usr/share/nginx/html/config.json:ro
+    restart: unless-stopped

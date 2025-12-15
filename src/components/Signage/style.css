@@ -1,16 +1,21 @@
 .marquee {
+    width: 100%;
+    height: 100%;
+    position: relative;
     overflow: hidden;
     white-space: nowrap;
     font-weight: 900;
     font-size: 5rem;
 }
 .marquee span {
+    /*width: max-content;*/
     display: inline-block;
-    animation: marquee 10s linear infinite;
+    padding-left: 100%;
+    /*animation: marquee 10s linear infinite;*/
 }
 @keyframes marquee {
     from {
-        transform: translateX(100%);
+        transform: translateX(0);
     }
     to {
         transform: translateX(-100%);
